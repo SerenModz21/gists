@@ -1,0 +1,18 @@
+name: Activity Box
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v1
+      - uses: JasonEtco/activity-box@master
+        env:
+          GH_PAT: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: SerenModz21
+          GIST_ID: 07bbe9fb38e342fc3019a5cebe09aefd
