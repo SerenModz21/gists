@@ -1,5 +1,4 @@
 name: Activity Box
-
 on:
   schedule:
     - cron: "*/10 * * * *"
